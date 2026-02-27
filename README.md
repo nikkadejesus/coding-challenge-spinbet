@@ -1,4 +1,4 @@
-# coding-challenge-spinbet# Spinbet Automation Framework
+# Spinbet Automation Framework (QA Coding Challenge)
 
 ## 1. Description of the Problem & Solution
 
