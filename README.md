@@ -68,6 +68,8 @@ To ensure the suite remains maintainable, I implemented **Custom Cypress Command
 ---
 
 ## 4. Setup & Execution
+### Pre-requisites: Geo-Location Requirement
+The Spinbet platform restricts access based on IP address. For this specific challenge, we're focusing on /en-nz/. **You must be using a New Zealand IP address** (e.g., via VPN) to execute these tests successfully. Failure to do so will result in connection timeouts or restricted access errors.
 1. **Install Dependencies:** `npm install`
 2. **Launch Cypress (GUI):** `npx cypress open`
 3. **Run Headless Suite:** `npx cypress run`
