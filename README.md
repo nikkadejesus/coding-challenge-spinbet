@@ -52,7 +52,7 @@ To ensure the suite remains maintainable, I implemented **Custom Cypress Command
 
 ### Technical & Logic Observationshts
 * **Inconsistent Session Persistence:** I observed that if a user abandons the flow at Step 3 and reloads the page after a timeout, they are treated as a fully authenticated user.
-  ***Risk:** This creates "partial profiles" in the database and bypasses final validation steps. Authentication should only be finalized upon the successful completion of the entire registration handshake.
+  * **Risk:** This creates "partial profiles" in the database and bypasses final validation steps. Authentication should only be finalized upon the successful completion of the entire registration handshake.
 * **Geographic Data Mismatch (Localization):** While the /en-nz/ path allows users to select a Canadian (+1) prefix, the Address step only loads New Zealand regions.
   * **Recommendation:** Implement dynamic dependency injection for address fields based on the selected country code to prevent users from being "stuck" at the final step.
 * **Delayed Backend Validation:** Errors for "Taken" or "Invalid" phone numbers only trigger when clicking **Next** at the 2nd step.
@@ -78,7 +78,7 @@ The Spinbet platform restricts access based on IP address. For this specific cha
 "scripts": {
     "test:all": "npx cypress run",
     "test:registration": "npx cypress run --browser chrome --spec 'cypress/e2e/registration.cy.js'",
-    "test:search": "npx cypress run --browser chrome --spec 'cypress/e2e/casino-lobby-search.cy.js'"
+    "test:search": "npx cypress run --browser chrome --spec 'cypress/e2e/search.cy.js'"
   }
 ```
 ### Example: 
